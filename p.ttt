@@ -1,0 +1,118 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:test2mod}Logic of drawing conclusions from F-tests.}
+
+\begin{tabular}{lllc}
+\toprule
+$F_A$ & $F_B$ & $F_{AB}$ & Conclusion\\
+\midrule
+- & - & - & Y\textasciitilde{}.\\
++ & - & - & Y\textasciitilde{}A\\
+- & + & - & Y\textasciitilde{}B\\
+- & - & + & Y\textasciitilde{}A:B\\
++ & + & - & Y\textasciitilde{}A+B\\
++ & - & + & Y\textasciitilde{}A+A:B\\
+- & + & + & Y\textasciitilde{}B+A:B\\
++ & + & + & Y\textasciitilde{}A+B+A:B\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:assessInterT}Evidence for models from data in Figure 4.}
+
+\begin{tabular}{clll}
+\toprule
+Model & \multicolumn{1}{c}{AIC} & \multicolumn{1}{c}{BIC} & \multicolumn{1}{c}{BF}\\
+\midrule
+Well Specified &  &  & \\
+\ \ \ Y\textasciitilde{}. & 2.021 & 0 & 1\\
+Y\textasciitilde{}A & 3.035 & 3.395 & 0.354\\
+Y\textasciitilde{}B & 3.035 & 3.395 & 0.354\\
+Y\textasciitilde{}A+B & 4.036 & 6.779 & 0.121\\
+\ \ \ Y\textasciitilde{}A+B+A:B & 1.911 & 7.036 & 0.188\\ \midrule
+Poorly Specified &  &  & \\
+\ \ \ Y\textasciitilde{}A:B & 0 & 0.361 & 1.305\\
+Y\textasciitilde{}A+A:B & 0.962 & 3.705 & 0.574\\
+\ \ \ Y\textasciitilde{}B+A:B & 0.962 & 3.705 & 0.574\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:senTab}Model comparisons for Scenarios 1 and 2.}
+
+\begin{tabular}{llll}
+\toprule
+Model & Denotes & Specification & Bayes Factor\\
+\midrule
+Scenario 1 &  &  & \\
+\ \ \ Y\textasciitilde{}S & Null & Well & 1.0e+00\\
+\ \ \ Y\textasciitilde{}S+AS & Null & Poor & 7.6e+120\\
+\ \ \ Y\textasciitilde{}S+A & Effect & Poor & 3.1e+04\\
+\ \ \ Y\textasciitilde{}S+A+AS & Effect & Well & 2.5e+120\\
+Scenario 2 &  &  & \\
+\ \ \ Y\textasciitilde{}S & Null & Well & 1.0e+00\\
+\ \ \ Y\textasciitilde{}S+AS & Null & Poor & 6.3e-01\\
+\ \ \ Y\textasciitilde{}S+A & Effect & Poor & 6.3e+02\\
+\ \ \ Y\textasciitilde{}S+A+AS & Effect & Well & 2.2e+00\\
+Scenario 2 w/ Fine-Grain Specifications &  &  & \\
+\ \ \ Y\textasciitilde{}S & Null & Well & 1.0e+00\\
+\ \ \ Y\textasciitilde{}S+AS & Null & Poor & 4.2e+01\\
+\ \ \ Y\textasciitilde{}S+A & Effect & Poor & 6.4e+02\\
+\ \ \ Y\textasciitilde{}S+A+AS & Effect & Well & 1.0e+03\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tableExample}Model comparisons for the truth-effect example (Bayes factors for all specified models relative to the best model)}
+
+\begin{tabular}{ll}
+\toprule
+Model & \multicolumn{1}{c}{Bayes Factor}\\
+\midrule
+Y\textasciitilde{}S+T & 1-to-4.5e191\\
+Y\textasciitilde{}S+T+R+SR & 1-to-3.3\\
+Y\textasciitilde{}S+T+W & 1-to-1.6e191\\
+Y\textasciitilde{}S+T+R+SR+W & Best\\
+Y\textasciitilde{}S+T+R+SR+W+RW+SRW & 1-to-353\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}

@@ -1,0 +1,61 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{p_files/figure-latex/modAOV3-1.pdf}
+\caption{\label{fig:modAOV3}Model comparisons in conventional ANOVA.}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{p_files/figure-latex/coincident-1.pdf}
+\caption{\label{fig:coincident}Lack of main effects results from a coincidence. A-B. The perfect cross-over pattern results from picking exactly perfect levels of fat and sugar content. C-D. Even if one level is changed, then main effects appear.}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{p_files/figure-latex/modAOV-1.pdf}
+\caption{\label{fig:modAOV}The eight models applicable to a 2-way design. There are five well specified models (light shadeing) and three poorly specified models (dark shading). Inadmissable models have interactions without corresponding main effects.}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{p_files/figure-latex/assessInterF-1.pdf}
+\caption{\label{fig:assessInterF}Is there an interaction here? The answer depends on the included models (Table 2).}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{p_files/figure-latex/modAOVs-1.pdf}
+\caption{\label{fig:modAOVs}Eight possible models in a one-way, within-subject setup. The darkest shade indicates models without a main effect of participants. We assume participant effect and these models are considered no further. The middle shade indicates a model inadmissable because there is an interaction without a corresponding main effects. The line labeled \emph{F} indicates the conventional contrast, the line labeled \emph{1} and \emph{2} are our previous recommendation and our current recommendation, respectively. The two models we would consider are connected by Line 2.}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{p_files/figure-latex/anovaTheta-1.pdf}
+\caption{\label{fig:anovaTheta}The distribution of individual true effects under the full model (solid line, Model \texttt{Y\textasciitilde{}A+S+A:S}) and under the null model (dashed line, Model \texttt{Y\textasciitilde{}A+A:S}). The mean of the distribution is the main effect of condition, and the variability is the interaction with individuals.}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics[width=3.33in]{blur} \caption{Three hypothetical stimuli in a Stroop task: a clear version, a somewhat blurred version, and a fully blurred version.  The fully blurred version is an appropriate physical model of the null that there is no effect of word identity.}\label{fig:blur}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{p_files/figure-latex/blurMods-1.pdf}
+\caption{\label{fig:blurMods}Three models on true individual effects. A: Everybody has a true Stroop effect in the usual direction (faster responses to congruent than incongruent items), and this effect decreases with blur. The null model is that nobody has any true Stroop effect. B: Most people have the usual Stroop effect, but some have a true Stroop reversal (faster responses to congruent than incongruent items). For all people, the Stroop effect decreases in magnitude with blur. The null model is that nobody has any true Stroop effect. C: ANOVA model. As the blur is increased more and more people switch from true Stroop effect to a true Stroop reversal. The null model is that half the people have a true Stroop effect and half have a reversal.}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{p_files/figure-latex/scenario-1.pdf}
+\caption{\label{fig:scenario}Model comparisons for two within-subject scenarios. A. Observed individual effects for Scenarios 1 and 2. Conventional \(p\)-values indicate an effect in Scenario 2 only.}
+\end{figure*}
