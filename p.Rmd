@@ -27,11 +27,10 @@ affiliation       :
     institution: University of Cardiff
 
 
-author_note: Rmarkdown source code for this paper is available at https://github.com/PerceptionAndCognitionLab/stat_aov2
-
-abstract: ANOVA---the workhorse of experimental psychology--seems well understood in that behavioral sciences have agreed-upon contrasts and reporting conventions.  Yet, we argue this consensus hides considerable flaws in common ANOVA procedures, and these flaws become especially salient in the within-subject and mixed-model cases.  The main thesis is that these flaws are in model specification.  The specifications underlying common use are deficient from a substantive perspective, that is, they do not match reality in behavioral experiments.  The problem, in particular, is that specifications rely on coincidental rather than robust statements about reality.  We provide specifications that avoid making arguments based on coincidences, and note these Bayes factor model comparisons among these specifications are already convenient in the BayesFactor package.  Finally, we argue that model specification necessarily and critically reflects substantive concerns, and, consequently, is ultimately the responsibility of substantive researchers.  Rmarkdown source code for this paper is available at https://github.com/PerceptionAndCognitionLab/stat_aov2.
+abstract          : >
+  ANOVA---the workhorse of experimental psychology--seems well understood in that behavioral sciences have agreed-upon contrasts and reporting conventions.  Yet, we argue this consensus hides considerable flaws in common ANOVA procedures, and these flaws become especially salient in the within-subject and mixed-model cases.  The main thesis is that these flaws are in model specification.  The specifications underlying common use are deficient from a substantive perspective, that is, they do not match reality in behavioral experiments.  The problem, in particular, is that specifications rely on coincidental rather than robust statements about reality.  We provide specifications that avoid making arguments based on coincidences, and note these Bayes factor model comparisons among these specifications are already convenient in the BayesFactor package.  Finally, we argue that model specification necessarily and critically reflects substantive concerns, and, consequently, is ultimately the responsibility of substantive researchers.  Source code for this project is at github/PerceptionAndCognitionLab/stat_aov2.
   
-keywords          : "ANOVA, mixed models, Bayesian models, hierarchical models"
+keywords          : "ANOVA"
 
 bibliography      : ["bibliography.bib", "zlab.bib"]
 figsintext        : no
@@ -67,8 +66,6 @@ library(dplyr)
 library(readr)
 library(beeswarm)
 ```
-
-
 
 
 
@@ -146,7 +143,7 @@ How shall we take into account this coincidental property?  The solution is to i
 drawAOV8()
 ```
 
-The exclusion of poorly-specified models in Figure \ref{fig:modAOV} changes ANOVA.  Because the usual $F$-statistics are contrasts where one model may be poorly specified, these $F$-tests are no longer appropriate.  One approach is to devise new $F$-tests that do not allow for main effects without interactions.  The new $F$-test consists of different formulas that are know as Type II sum-of-squares  [@Yates.1935].   @Langsrud.2003 provides a particularly accessible discussion of the models and how they motivate the Type II sum-of-squares formulations.  Nonetheless, it is difficult to find Type II sums-of-squares implemented in software.    
+The exclusion of poorly-specified models in Figure \ref{fig:modAOV} changes ANOVA.  Because the usual $F$-statistics are contrasts where one model may be poorly specified, these $F$-tests are no longer appropriate.  One approach is to devise new $F$-tests that do not allow for main effects without interactions.  The new $F$-test consists of different formulas that are known as Type II sum-of-squares  [@Yates.1935].   @Langsrud.2003 provides a particularly accessible discussion of the models and how they motivate the Type II sum-of-squares formulations.  Nonetheless, it is difficult to find Type II sums-of-squares implemented in software.    
 
 We think that analysts who wish to exclude poorly-specified models will find *model comparison* relatively straightforward and convenient.  With model comparison, one may use conventional comparison techniques and simply exclude the poorly-specified models.  The well-specified models in Figure \ref{fig:modAOV} may be compared by popular methods including Akaike Information Criterion [AIC, @Akaike.1974], Bayesian Information Criterion [BIC, @Schwarz.1978], Bayes factors [@Jeffreys.1961], and leave-one-out cross validation [@Vehtari.etal.2017].
 
@@ -258,7 +255,7 @@ drawBlurMods()
 ```
 
 
-The key question is *what is an appropriate specification of individual true effects, $\theta_j$* for this case?  Figure \ref{fig:blurMods}  shows three different possibilities.  The first, in Panel A, corresponds to @Haaf.Rouder.2017 notion that everyone has a true Stroop effect in the same (positive) direction.  Accordingly, the effect comes from a common theoretical mechanism, and all the differences across participants are in degree rather than in kind [@Rouder.Haaf.2020].  As the stimulus becomes blurred, the distribution is attenuated toward zero.  Importantly, in the unreadable limit, everybody's true effect is identically zero as it must be because the word identities are exactly the same for congruent and incongruent stimuli.   Panel B shows a variant where individuals vary in kind as well as in degree.  Here, when the word is clear, most people have a positive effect, but a minority have a negative effect.  Both these positive and negative effects, which are driven by word identity, decrease with increasing blur.  In the limit that the word is unreadble, the effects collapse to zero as they must.
+The key question is *what is an appropriate specification of individual true effects, $\theta_j$* for this case?  Figure \ref{fig:blurMods}  shows three different possibilities.  The first, in Panel A, corresponds to @Haaf.Rouder.2017 notion that everyone has a true Stroop effect in the same (positive) direction.  Accordingly, the effect comes from a common theoretical mechanism, and all the differences across participants are in degree rather than in kind [@Rouder.Haaf.2020].  As the stimulus becomes blurred, the distribution is attenuated toward zero.  Importantly, in the unreadable limit, everybody's true effect is identically zero as it must be because the word identities are exactly the same for congruent and incongruent stimuli.   Panel B shows a variant where individuals vary in kind as well as in degree.  Here, when the word is clear, most people have a positive effect, but a minority have a negative effect.  Both these positive and negative effects, which are driven by word identity, decrease with increasing blur.  In the limit that the word is unreadable, the effects collapse to zero as they must.
 
 Panel C shows what happens in conventional within-subjects ANOVA.  Accordingly, by blurring the word, the experimenter has transferred people into different theoretically meaningful regions.  As we increase the blur, people transfer from the usual Stroop where there is quick automatic reading to a pathological domain where there is some compensatory or strategic process.  When the word is unreadable, exactly half the people show the usual Stroop with fast automatic reading of unreadable words and half are pathological with a compensatory process driven by unreadable words.  We think these implications are challenging, and, consequently, model `Y~S+A:S` is poorly specified.  In fact, it is outright untenable.  Those who use it have a high bar in justifying it because it makes little substantive sense. 
 
